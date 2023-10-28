@@ -20,6 +20,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -28,7 +29,7 @@ import androidx.compose.ui.unit.sp
 import com.example.shpiel.R
 
 @Composable
-fun CardCarrouselItem(){
+fun CardCarrouselItem(nombre: String, calificacion: String, imagen: Painter){
     Card(
         modifier = Modifier
             .height(200.dp)
@@ -44,7 +45,7 @@ fun CardCarrouselItem(){
         ) {
             // Imagen de fondo
             Image(
-                painter = painterResource(id = R.drawable.pajerete),
+                painter = imagen,
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize()
@@ -60,13 +61,13 @@ fun CardCarrouselItem(){
                 verticalArrangement = Arrangement.Bottom
             ) {
                 Text(
-                    text = "Tech",
+                    text = nombre,
                     style = MaterialTheme.typography.body2,
                     modifier = Modifier.padding(start = 20.dp, top = 5.dp)
                 )
                 Spacer(modifier = Modifier.height(2.dp))
                 Text(
-                    text = "4.6",
+                    text = calificacion,
                     modifier = Modifier.padding(start = 20.dp, bottom = 5.dp),
                     fontSize = 14.sp,
                     fontWeight = FontWeight.SemiBold

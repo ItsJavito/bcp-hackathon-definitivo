@@ -1,5 +1,6 @@
 package com.example.shpiel.presentation.catalogo.components
 
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyRow
@@ -14,11 +15,10 @@ import com.example.shpiel.R
 fun CardCarrousel(){
     //val cardBackground = painterResource(id = R.drawable.background_image)
 
-    LazyRow {
-        items(5) { index ->
-            CardCarrouselItem(
-
-            )
-        }
+    Row {
+        CardCarrouselItem("EcoTech ", "4.2", painterResource(id = R.drawable.verdeee))
+        CardCarrouselItem("InfinityWave  ", "3.2", painterResource(id = R.drawable.teccc))
+        CardCarrouselItem("SolarSolutions ", "4.8", painterResource(id = R.drawable.estrellas))
+        CardCarrouselItem("BioGenius  ", "3.7", painterResource(id = R.drawable.verdeee))
     }
 }
