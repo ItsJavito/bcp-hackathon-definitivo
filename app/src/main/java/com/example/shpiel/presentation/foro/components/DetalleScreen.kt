@@ -26,7 +26,7 @@ fun DetalleScreen() {
         }
         Row(
             modifier = Modifier.fillMaxWidth()
-                .border(1.dp, Color.Gray, RoundedCornerShape(10.dp))
+                .border(1.dp, Color.Gray)
                 .padding(all=20.dp)
         ){
             DetalleCard(
