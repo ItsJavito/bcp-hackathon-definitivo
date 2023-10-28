@@ -15,7 +15,7 @@ import com.example.shpiel.presentation.login.viewmodels.LoginViewModelFactory
 
 @Composable
 fun LoginScreen(
-    onLoginSuccess : (String) -> Unit,
+    onLoginSuccess : () -> Unit,
     onRegister: () -> Unit,
     vm : LoginViewModel = viewModel( factory =  LoginViewModelFactory(onLoginSuccess))
 ){
