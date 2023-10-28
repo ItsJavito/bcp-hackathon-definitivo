@@ -75,15 +75,19 @@ fun SignupFields(
         CustomTextField(value = password, onValueChange = onPasswordChange, label = "Confirmar Contraseña",
             isPasswordField = true, isPasswordVisible = false )
 
-        // poner un checkbox
-
-        Checkbox(checked = false, onCheckedChange = { /*TODO*/ })
         Column {
-            Text(
-                text = "Al registrarte aceptas los terminos y condiciones",
-                fontSize = 10.sp,
-                textAlign = TextAlign.Left
-            )
+            Row(){
+                // poner un checkbox
+                Checkbox(checked = false, onCheckedChange = { /*TODO*/ })
+                Text(
+                    text = "Al registrarte aceptas los terminos y condiciones",
+                    fontSize = 10.sp,
+                    textAlign = TextAlign.Left,
+                    modifier = Modifier
+                        .padding(top=20.dp)
+
+            )}
+
         }
         Button(
             modifier = Modifier
