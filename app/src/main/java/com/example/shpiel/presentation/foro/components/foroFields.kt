@@ -42,6 +42,6 @@ fun foroFields(){
 @Preview
 @Composable
 @Preview(showBackground = true)
-fun XD(){
+fun XD1(){
     foroFields()
 }
