@@ -12,6 +12,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.shpiel.presentation.catalogo.screens.CatalogoScreen
 import com.example.shpiel.presentation.main.components.Navegacion
 import com.example.shpiel.ui.theme.ShpielTheme
 import com.example.shpiel.presentation.login.screen.LoginScreen
@@ -30,7 +31,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Navegacion(id = id)
+                    CatalogoScreen()
                 }
             }
         }

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import com.example.shpiel.presentation.catalogo.screens.CatalogoScreen
 
 import com.example.shpiel.presentation.login.screen.LoginScreen
 import com.example.shpiel.ui.theme.ShpielTheme
@@ -12,7 +13,7 @@ class LoginActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         setContent{
-            LoginScreen(onLoginSuccess = pasoMain, onRegister = pasoSignup)
+            CatalogoScreen()//LoginScreen(onLoginSuccess = pasoMain, onRegister = pasoSignup)
         }
     }
      private val pasoMain: (String) -> Unit = {
