@@ -20,6 +20,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
@@ -30,7 +31,7 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun CatalogoCarrouselItem(modifier: Modifier = Modifier, nombre: String, lema: String, calificacion: String, imagen: Painter){
-    val itemColor = Color(0xFFfe7901 )
+    val itemColor = Color(0xFF00498d  )
 
     Card(
         modifier = modifier.fillMaxWidth(),
@@ -43,13 +44,13 @@ fun CatalogoCarrouselItem(modifier: Modifier = Modifier, nombre: String, lema: S
                 painter = imagen,
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize()
+                modifier = Modifier.fillMaxSize().alpha(0.4f)
             )
 
             Column(modifier = Modifier.fillMaxHeight()) {
                 Text(
                     text = nombre,
-                    color = Color.White,
+                    color = itemColor,
                     fontSize = 24.sp,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier
@@ -57,16 +58,16 @@ fun CatalogoCarrouselItem(modifier: Modifier = Modifier, nombre: String, lema: S
                 )
                 Text(
                     text = lema,
-                    color = Color.White,
+                    color = itemColor,
                     fontSize = 20.sp,
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(top = 0.dp, start = 12.dp),
-                    fontWeight = FontWeight.Light
+                    fontWeight = FontWeight.SemiBold
                 )
                 Text(
                     text = calificacion,
-                    color = Color.White,
+                    color = itemColor,
                     fontSize = 16.sp,
                     modifier = Modifier.fillMaxSize().padding(bottom = 10.dp, start = 12.dp),
                     fontWeight = FontWeight.SemiBold

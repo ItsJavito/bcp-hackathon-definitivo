@@ -21,6 +21,10 @@ import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -35,6 +39,9 @@ import com.example.shpiel.R
 
 @Composable
 fun CatalogoDetail(){
+    var clic by remember { mutableStateOf(false) }
+    val azulColor = Color(0xFF00498d)
+    val naranjaColor = Color(0xFFfe7901)
     Column(modifier = Modifier
         .fillMaxSize()) {
 
@@ -102,15 +109,15 @@ fun CatalogoDetail(){
             ) {
                 Button(
                     onClick = {
-                        // Acción al hacer clic en el botón
+                        clic =! clic
                     },
                     modifier = Modifier
                         .fillMaxWidth()
                         .wrapContentSize(align = Alignment.BottomCenter)
                         ,
-                    colors = ButtonDefaults.buttonColors(color)// Posición en la parte inferior
+                    colors = ButtonDefaults.buttonColors(if (clic) naranjaColor else azulColor)// Posición en la parte inferior
                 ) {
-                    Text(text = "Invertir", color = Color.White)
+                    Text(text = if (clic) "Realizado" else "Invertir", color = Color.White)
                 }
             }
         }

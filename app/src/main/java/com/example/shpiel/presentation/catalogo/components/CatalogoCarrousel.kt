@@ -29,7 +29,7 @@ fun CatalogoCarrousel(){
             "TechFusion ",
             "Fusionando Tecnología, Creando Futuro",
             "4.5",
-            painterResource(id = R.drawable.tec)
+            painterResource(id = R.drawable.teccc)
         )
         CatalogoCarrouselItem(
             Modifier
@@ -49,7 +49,7 @@ fun CatalogoCarrousel(){
             "StellarCraft Industries",
             "Donde la Creatividad se Convierte en Estrellas",
             "4.7",
-            painterResource(id = R.drawable.estrella)
+            painterResource(id = R.drawable.estrellas)
         )
         CatalogoCarrouselItem(
             Modifier
