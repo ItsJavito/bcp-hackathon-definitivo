@@ -74,7 +74,7 @@ fun LoginFields(
                 TextField(modifier = Modifier
                     .fillMaxWidth()
                     .padding(start = 50.dp, top = 0.dp, end = 50.dp, bottom = 0.dp),
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number,
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text,
                         imeAction = ImeAction.Done),
                     keyboardActions = KeyboardActions(
                         onDone = {keyboardController?.hide()}),
