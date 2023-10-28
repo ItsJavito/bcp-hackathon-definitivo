@@ -15,9 +15,12 @@ import com.example.shpiel.presentation.catalogo.components.TopBarHead
 
 @Composable
 fun CatalogoScreen(){
+    val scrollState = rememberScrollState()
+
     Column(
         modifier = Modifier
-            .fillMaxSize(),
+            .fillMaxSize()
+            .verticalScroll(scrollState),
 
         ) {
         TopBarHead()
