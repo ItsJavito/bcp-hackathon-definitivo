@@ -4,9 +4,6 @@ import androidx.compose.animation.core.snap
 import androidx.compose.runtime.Composable
 import com.example.shpiel.model.entity.Evento
 import com.example.shpiel.model.entity.User
-import com.example.shpiel.presentation.main.viewmodels.MainViewModel
-import com.google.android.gms.common.server.converter.StringToIntConverter
-import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
