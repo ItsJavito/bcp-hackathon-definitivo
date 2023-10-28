@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1019028112970",
+    "project_id": "shpiel-67020",
+    "storage_bucket": "shpiel-67020.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019028112970:android:4130e91477c0eb28ab48b3",
+        "android_client_info": {
+          "package_name": "com.example.shpiel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1019028112970-232937q0agamclj7vlf0ttrn8tg78r92.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjfWQhumNxdF0JcFdptGxW0GYObMvLg7c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1019028112970-232937q0agamclj7vlf0ttrn8tg78r92.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
