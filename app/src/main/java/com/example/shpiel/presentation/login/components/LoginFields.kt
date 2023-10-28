@@ -52,9 +52,10 @@ fun LoginFields(
                 horizontalAlignment =  Alignment.CenterHorizontally
             ) {
                 Image(
-                    painterResource(R.drawable.pajerete),
+                    painterResource(R.drawable.fondologin),
                     contentDescription = "Shpiel",
-                    Modifier.size(size=200.dp)
+                    Modifier
+                        .size(size = 400.dp)
                         .padding(30.dp)
                 )
             }
@@ -85,7 +86,7 @@ fun LoginFields(
                     label = { Text(text = "Correo elctrónico")})
                 TextField(modifier = Modifier
                     .fillMaxWidth()
-                    .padding(start = 50.dp, top = 20.dp, end = 50.dp, bottom = 0.dp),
+                    .padding(start = 50.dp, top = 0.dp, end = 50.dp, bottom = 0.dp),
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password,
                         imeAction = ImeAction.Done),
                     keyboardActions = KeyboardActions(
@@ -144,6 +145,58 @@ fun LoginFields(
                         onRegisterClick()
                     }
                 )
+            }
+
+        }
+        Divider()
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .weight(1f),
+            horizontalArrangement = Arrangement.Center
+        ){
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(2f),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.SpaceBetween
+            ){
+                Text(
+                    text = "-Inicia sesión de otra forma-"
+                )
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(2f)
+                        .padding(top = 50.dp),
+                    horizontalArrangement = Arrangement.Center,
+
+                ){
+                    Image(
+                        painterResource(R.drawable.appcrc),
+                        contentDescription = "appcrc",
+                        Modifier
+                            .size(size = 35.dp)
+                            .padding(horizontal = 5.dp)
+                    )
+                    Image(
+                        painterResource(R.drawable.facecrc),
+                        contentDescription = "facecrc",
+                        Modifier
+                            .size(size = 38.dp)
+                            .padding(horizontal = 5.dp)
+                    )
+                    Image(
+                        painterResource(R.drawable.gogcr),
+                        contentDescription = "googcrc",
+                        Modifier
+                            .size(size = 33.dp)
+                            .padding(horizontal = 5.dp)
+
+                    )
+
+                }
             }
 
         }
